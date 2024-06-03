@@ -149,7 +149,7 @@ resource "aws_eip" "static_eip" {
 
 # ECR Repository
 resource "aws_ecr_repository" "foo" {
-  name                 = "clo835-db"
+  name                 = "clo835-ecr"
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {

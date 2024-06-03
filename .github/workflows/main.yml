@@ -34,7 +34,7 @@ jobs:
         ls -ltra
         # Docker build command
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY-app:$IMAGE_TAG -f Dockerfile .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY-app:$IMAGE_TAG
 
 
     - name: Build and Push SQL image
@@ -46,4 +46,4 @@ jobs:
         ls -ltra
         # Docker build command
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY-mysql:$IMAGE_TAG -f Dockerfile_mysql . 
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY-mysql:$IMAGE_TAG
